@@ -1,0 +1,7 @@
+#vencimento-inicio-label{
+  display: block;
+}
+
+#vencimento-inicio-txt, #vencimento-fim-txt{
+  width: 95px;
+}
