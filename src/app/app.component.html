@@ -27,9 +27,21 @@
         <p-column field="descricao" header="Descrição"></p-column>
         <p-column field="dataVencimento" header="Vencimento" styleClass="col-data"></p-column>
         <p-column field="dataPagamento" header="Pagamento" styleClass="col-data"></p-column>
-        <p-column field="valor" header="Valor" styleClass="col-valor"></p-column>
-        <p-column field="" header=""></p-column>
+        <p-column field="valor" header="Valor" styleClass="col-valor">
+          <ng-template let-vlancamento="rowData" pTemplate="body">
+            <span [ngStyle]="{ color: vlancamento.tipo === 'DESPESA' ? 'red' : 'blue' }">{{vlancamento.valor}}</span>
+          </ng-template>
+        </p-column>
+        <p-column styleClass="col-acoes">
+          <ng-template pTemplate="body">
+            <a pButton icon="fa-pencil"></a>
+            <a pButton icon="fa-trash"></a>
+          </ng-template>
+        </p-column>
       </p-dataTable>
+    </div>
+    <div class="ui-g-12">
+      <a pButton label="Novo Lançamento"></a>
     </div>
   </div>
 </div>
