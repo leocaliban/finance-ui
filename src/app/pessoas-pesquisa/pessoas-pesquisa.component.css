@@ -1,0 +1,10 @@
+.status{
+  text-decoration: none;
+}
+
+.status:hover{
+  font-weight: bold;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
