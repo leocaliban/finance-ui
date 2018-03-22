@@ -7,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LancamentosPesquisaComponent {
   lancamentos = [
-    {tipo: 'DESPESA', descricao: 'Compra de pão', dataVencimento: '30/06/2017', dataPagamento: null, valor: 4.55
+    {tipo: 'DESPESA', descricao: 'Compra de pão', dataVencimento: new Date(2017, 6, 30), dataPagamento: null, valor: 4.55
       , pessoa: 'Padaria Pão Doido'},
-    {tipo: 'RECEITA', descricao: 'Aluguel', dataVencimento: '11/03/2018', dataPagamento: '11/03/2018', valor: 220.00
+    {tipo: 'RECEITA', descricao: 'Aluguel', dataVencimento: new Date(2018, 3, 11), dataPagamento: new Date(2018, 3, 11), valor: 220.00
       , pessoa: 'Jack Bauer'},
-    {tipo: 'RECEITA', descricao: 'Auxílio Alimentação', dataVencimento: '12/03/2018', dataPagamento: '12/03/2018', valor: 380.00
-      , pessoa: 'UCT'}
+    {tipo: 'RECEITA', descricao: 'Auxílio Alimentação', dataVencimento: new Date(2018, 3, 11),
+    dataPagamento: new Date(2018, 3, 11), valor: 380.00
+      , pessoa: 'UCT'},
+      {tipo: 'DESPESA', descricao: 'Guaraná', dataVencimento: new Date(2018, 3, 22),
+    dataPagamento: new Date(2018, 3, 22), valor: 5.00
+      , pessoa: 'Lanchonete'}
   ];
 }
